@@ -1,0 +1,27 @@
+.header_wrapper {
+    height: 10%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 0px 20px;
+    height: 100%;
+}
+
+.btn {
+    padding: 7px 10px;
+    background-color: var(--bg-red);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.header img {
+    height: 60px;
+}

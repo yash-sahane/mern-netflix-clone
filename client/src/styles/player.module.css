@@ -1,0 +1,26 @@
+.back_icon_div {
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.backIcon {
+    font-size: 20px;
+    color: white;
+}
+
+.player {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+
+.player video {
+    height: 100%;
+    width: 100%;
+}

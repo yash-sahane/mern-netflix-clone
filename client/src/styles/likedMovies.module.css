@@ -1,0 +1,10 @@
+.container {
+    padding: 100px 30px 30px 30px;
+}
+
+.movies {
+    margin-top: 2rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
