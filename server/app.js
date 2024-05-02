@@ -15,10 +15,6 @@ config({
   path: './database/config.env'
 });
 
-app.use(cors({
-  origin: [process.env.FRONTEND_URI],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}))
+app.use(cors())
 
 app.use('/users', userRouter);
