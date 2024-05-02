@@ -18,3 +18,11 @@ config({
 app.use(cors())
 
 app.use('/users', userRouter);
+
+// Define route to serve React application's static files
+app.use(express.static(path.join(__dirname, 'client/build')));
+
+// Define route to handle client-side routing
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
