@@ -63,7 +63,6 @@ export const getLikedMovies = async (req, res, next) => {
 export const removeFromLikedMovies = async (req, res, next) => {
   try {
     const { email, movieId } = req.body;
-    console.log(email, movieId);
     const user = await User.findOne({ email });
     if (user) {
       const { likedMovies } = user;

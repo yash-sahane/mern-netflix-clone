@@ -25,7 +25,6 @@ const Home = () => {
     }
 
     useEffect(() => {
-        console.log(genresLoaded);
         if (genresLoaded) dispatch(getMovies({ type: "all" }));
     }, [genresLoaded]);
 

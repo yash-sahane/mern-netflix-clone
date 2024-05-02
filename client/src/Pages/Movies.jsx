@@ -28,7 +28,6 @@ const Movies = () => {
     // }, []);
 
     useEffect(() => {
-        console.log(genresLoaded);
         if (genresLoaded) dispatch(getMovies({ type: "movie" }));
     }, [genresLoaded]);
 

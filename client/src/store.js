@@ -61,7 +61,6 @@ export const getMovies = createAsyncThunk(
 export const getMoviesByGenres = createAsyncThunk(
     "netflix/genreMovies",
     async ({ genre, type }, { getState }) => {
-        console.log(genre);
         const { netflix: { genres } } = getState();
         const data = getRawData(`${TMDB_BASE_URL}/discover/${type}?api_key=${TMDB_API_KEY}&with_genres=${genre}`, genres);
         return data;
@@ -83,7 +82,6 @@ export const removeFromLikedMovies = createAsyncThunk('netflix/removeLikedMovie'
         const { data: { movies } } = await axios.put(`${server}/users/removeLiked`, {
             email, movieId
         });
-        console.log(movies);
         return movies;
     } catch (error) {
         console.error("Error fetchig movies", error);

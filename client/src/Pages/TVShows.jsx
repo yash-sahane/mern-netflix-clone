@@ -24,7 +24,6 @@ const TVShows = () => {
   }
 
   useEffect(() => {
-    console.log(genresLoaded);
     if (genresLoaded) dispatch(getMovies({ type: "tv" }));
   }, [genresLoaded]);
 
