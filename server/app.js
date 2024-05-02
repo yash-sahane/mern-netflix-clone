@@ -2,7 +2,7 @@ import express from 'express';
 import { config } from "dotenv";
 import userRouter from './routes/user.js';
 import cors from 'cors';
-import path from 'path'; // Import the 'path' module
+import path from 'path';
 
 export const app = express();
 
@@ -19,6 +19,9 @@ config({
 app.use(cors());
 
 app.use('/users', userRouter);
+
+// Get the directory name from the current file's URL
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 // Define route to serve Vite build output files
 app.use(express.static(path.join(__dirname, 'dist')));
