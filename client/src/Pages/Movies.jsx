@@ -46,18 +46,6 @@ const Movies = () => {
         };
     }, []);
 
-    useEffect(() => {
-        // const unsubscribe = onAuthStateChanged(firebaseAuth, (user) => {
-        //     if (user) {
-        //         navigate('/');
-        //     }
-        // });
-
-        // return () => {
-        //     unsubscribe();
-        // };
-    }, []);
-
     return (
         <div className={styles.main}>
             <div>

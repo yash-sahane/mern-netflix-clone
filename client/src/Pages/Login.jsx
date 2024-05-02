@@ -4,12 +4,12 @@ import headerStyles from '../styles/header.module.css';
 import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import { firebaseAuth } from '../utils/firebase-config';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import Header from '../components/Header';
 import styles from '../styles/login.module.css'
 
-const Register = () => {
+const Login = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async (values, { setSubmitting }) => {
@@ -79,6 +79,7 @@ const Register = () => {
                                 </div>
                             </div>
                             <button className={headerStyles.btn} type='submit' disabled={isSubmitting}>Sign In</button>
+                            <Link to={'/register'}>Signup Here</Link>
                         </Form>
                     )}
                 </Formik>
@@ -87,4 +88,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;

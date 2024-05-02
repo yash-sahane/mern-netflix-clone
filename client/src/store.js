@@ -83,6 +83,7 @@ export const removeFromLikedMovies = createAsyncThunk('netflix/removeLikedMovie'
         const { data: { movies } } = await axios.put(`${server}/users/removeLiked`, {
             email, movieId
         });
+        console.log(movies);
         return movies;
     } catch (error) {
         console.error("Error fetchig movies", error);
