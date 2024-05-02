@@ -79,7 +79,7 @@ const Login = () => {
                                 </div>
                             </div>
                             <button className={headerStyles.btn} type='submit' disabled={isSubmitting}>Sign In</button>
-                            <Link to={'/register'}>Signup Here</Link>
+                            <Link to={'/register'} className={styles.redirectLink}>Signup Here</Link>
                         </Form>
                     )}
                 </Formik>
